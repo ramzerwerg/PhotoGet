@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f634b9fe1e.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="custom_scroll">
     <div class="wrapper">
         <div class="wrapper__filter">
             <h1 class="adress visible">PHOTOGET</h1>
@@ -21,20 +21,66 @@
                 <i class="fas fa-arrow-left"></i>
                 <div class="specific_btn">
                     <div class="btn">ПОЛУЧИТЬ КАРТИНКУ</div>
-                    <div class="btn__functional">
-                        <a class="functional__download">Скачать</a>
-                        <a class="functional__show">Посмотреть</a>
+                    <div class="btn__functional" style="display: none;">
+                        <a href="#" class="functional__download" download>Скачать</a>
+                        <a href="#" class="functional__show"  target="_blank">Посмотреть</a>
                     </div>
                 </div>
             </section>
 
             <section class="filter-img" style="display: none;">
                 <i class="fas fa-arrow-left"></i>
-                <div class="btn">ПОЛУЧИТЬ КАРТИНКУ</div>
+                <div class="search">
+                    <input class="search_input" type="text" placeholder="ПОИСК ПО ФИЛЬТРАМ ( YELLOW+FLOWER... )">
+                    
+                    <p class="search_filters">Дополнительные фильтры <i class="fas fa-caret-down"></i></p>
+                    
+                    <div class="filters_menu custom_scroll" data-closed="true">
+                        <div class="count_img">
+                            <input type="number" min="1", max="20" value="1">
+                            
+                            <p>Количество изображений</p>
+
+                            <svg style="top: 1px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-up fa-w-10"><path fill="currentColor" d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z" class=""></path></svg>
+                            <svg style="top: 11px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-caret-down fa-w-10"><path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z" class=""></path></svg>
+                        </div>
+
+                        <div class="categories">
+                            <p style="margin-right: 5px; min-width: fit-content;">Категории:</p>
+                            
+                            <div class="categories_list">
+                                <div class="category" data-category="background">background</div>
+                                <div class="category" data-category="fashion">fashion</div>
+                                <div class="category" data-category="nature">nature</div>
+                                <div class="category" data-category="science">science</div>
+                                <div class="category" data-category="education">education</div>
+                                <div class="category" data-category="feelings">feelings</div>
+                                <div class="category" data-category="health">health</div>
+                                <div class="category" data-category="people">people</div>
+                                <div class="category" data-category="religion">religion</div>
+                                <div class="category" data-category="places">places</div>
+                                <div class="category" data-category="animals">animals</div>
+                                <div class="category" data-category="industry">industry</div>
+                                <div class="category" data-category="computer">computer</div>
+                                <div class="category" data-category="food">food</div>
+                                <div class="category" data-category="sports">sports</div>
+                                <div class="category" data-category="transportation">transportation</div>
+                                <div class="category" data-category="travel">travel</div>
+                                <div class="category" data-category="buildings">buildings</div>
+                                <div class="category" data-category="business">business</div>
+                                <div class="category" data-category="music">music</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn" onclick="filterImage()">ПОЛУЧИТЬ КАРТИНКУ</div>
             </section>
         </div>
     </div>
     <footer>
+        <div class="container_card">
+        </div>
         <div class="copyright">Danil Shilo, 9k9391 Все права защищены 2021.</div>
     </footer>
 </body>
